@@ -58,3 +58,51 @@ fetch(url)
     </ul>
   </main>
 </template>
+
+<style scoped>
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 10px;
+}
+
+.menu__category {
+  padding-block: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__product {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.menu__price {
+  margin-inline-start: auto;
+}
+
+.category__name {
+  padding-block-end: 10px;
+  font-size: 3em;
+  letter-spacing: 2px;
+}
+
+.product__name {
+  /* font-variant: small-caps; */
+  font-size: 1.2em;
+}
+
+.product__description {
+  min-width: 100%;
+  font-style: italic;
+  font-weight: 100;
+}
+
+.product__dots {
+  border-bottom: 1px dotted var(--color-black);
+  flex-grow: 1;
+  align-self: center;
+  margin-inline: 20px;
+}
+</style>

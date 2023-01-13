@@ -9,12 +9,11 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "devDependencies": {
-    "nuxt": "3.0.0.rc13",
-    "pug": "^3.0.2",
-    "pug-plain-loader": "^1.1.0",
+    "nuxt": "3.0.0",
     "push-dir": "^0.4.1"
   },
   "dependencies": {
-    "sass": "^1.56.1"
+    "@pinia/nuxt": "^0.4.6",
+    "pinia": "^2.0.28"
   }
 }

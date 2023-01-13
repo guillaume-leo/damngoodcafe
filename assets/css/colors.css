@@ -2,7 +2,7 @@
   /* Colors as HSL values */
   --hsl-black: 0 0% 0%;
   --hsl-white: 0 0% 100%;
-  --hsl-primary: 318 73% 76%; 
+  --hsl-primary: 318 73% 76%;
   --hsl-primary-light: 318 63% 82%;
   --hsl-primary-dark: 318 80% 50%;
   --hsl-secondary: 136 92% 19%;
@@ -31,7 +31,6 @@
   --hsl-success-light: 153 31% 86%;
   --hsl-success-dark: 153 31% 79%;
   --hsl-success-darker: 152 69% 19%;
-
 
   /* Colors as HSL functions */
   --color-black: hsl(var(--hsl-black));
