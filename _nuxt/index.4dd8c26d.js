@@ -1,0 +1,1 @@
+import{_ as o}from"./_plugin-vue_export-helper.a1a6add7.js";import{b as s,o as c}from"./entry.623334c4.js";const e=""+globalThis.__publicAssetsURL("img/logo.png"),t={},n={class:"damngood-logo",src:e,alt:"damn good cafe logo"};function r(_,a){return c(),s("img",n)}const m=o(t,[["render",r]]);export{m as default};

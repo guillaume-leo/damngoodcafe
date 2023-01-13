@@ -1,0 +1,1 @@
+import{_ as c}from"./_plugin-vue_export-helper.a1a6add7.js";import{b as t,o as e}from"./entry.623334c4.js";const o={};function n(r,a){return e(),t("h1",null,"contact page")}const f=c(o,[["render",n]]);export{f as default};
