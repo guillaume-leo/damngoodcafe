@@ -22,7 +22,6 @@
       </li>
     </ul>
   </nav>
-
 </template>
 
 <script setup>
@@ -60,6 +59,9 @@ watch(path, () => {
 @media screen and (max-width: 1000px) {
   .navbar--phone {
     display: flex;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-primary);
   }
 }
 
