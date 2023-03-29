@@ -7,5 +7,9 @@
 </script>
 
 <style scoped>
-
+.damngood-logo {
+  /* padding-block-start: 175px; */
+  /* max-width: 900px; */
+  /* margin: auto; */
+}
 </style>

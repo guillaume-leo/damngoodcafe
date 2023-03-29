@@ -17,7 +17,6 @@
       <BaseLink url="/contact" text="contact" />
     </div>
   </nav>
-
 </template>
 
 <script setup>
@@ -49,6 +48,8 @@ watch(path, (newPath) => {
 @media screen and (min-width: 1000px) {
   .navbar--desktop {
     display: flex;
+    position: sticky;
+    top: 0;
   }
 }
 

@@ -41,10 +41,6 @@ watch(route, (newRoute) => {
   font-family: 'Titillium Web', sans-serif;
   max-height: 100vh;
   min-height: inherit;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
   animation: 1.5s ease-out 0s 1 fadeIn;
 
 }
@@ -63,11 +59,12 @@ watch(route, (newRoute) => {
 
 
 .content {
-  padding-block-start: 60px;
+  padding-block: 60px;
   overflow: scroll;
   flex-grow: 0;
   display: flex;
   flex-direction: column;
+  min-height: 700px;
 
 }
 </style>
