@@ -19,20 +19,26 @@
     />
     <ul v-show="menuButton?.state" class="navbar__links links">
       <li class="links__link links__link--home">
-        <BaseLinkIcon :src="DamnGoodLogo" size="100" url="/" alt="home page" />
+        <BaseLinkIcon
+          @click="closeMenu"
+          :src="DamnGoodLogo"
+          size="100"
+          url="/"
+          alt="home page"
+        />
       </li>
 
       <li class="links__link">
-        <BaseLink url="/about" text="about" />
+        <BaseLink @click="closeMenu" url="/about" text="about" />
       </li>
       <li class="links__link">
-        <BaseLink url="/menu" text="menu" />
+        <BaseLink @click="closeMenu" url="/menu" text="menu" />
       </li>
       <!-- <li class="links__link">
         <BaseLink url="/shop" text="shop" />
       </li> -->
       <li class="links__link">
-        <BaseLink url="/contact" text="contact" />
+        <BaseLink @click="closeMenu" url="/contact" text="contact" />
       </li>
     </ul>
   </nav>
@@ -50,13 +56,20 @@ const menuButton = $ref(null);
 const menuButtonSize = $ref("50");
 
 const { path } = storeToRefs(useRoutesStore());
-const { open } = storeToRefs(useNavbarStore());
+const navbatStore = useNavbarStore();
 
 watch(path, () => {
   menuButton.state = false;
 });
 
-const onclick = (val) => (open.value = val);
+const closeMenu = () => {
+  setTimeout(() => {
+    navbatStore.setOpen(false);
+    menuButton.state = false;
+  }, 100);
+};
+
+const onclick = (val) => navbatStore.setOpen(val);
 </script>
 
 <style scoped>

@@ -27,8 +27,6 @@ export const useMenuStore = defineStore({
               let price = row[2];
               let description = row[3];
 
-              console.log(type);
-
               if (type !== lastType) {
                 this.menu[type] = [];
                 lastType = type;
@@ -39,7 +37,6 @@ export const useMenuStore = defineStore({
             });
           }
 
-          console.log(JSON.parse(r[1]));
         });
     },
   },
