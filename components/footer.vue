@@ -12,10 +12,5 @@
   background-color: var(--color-primary);
   grid-template-rows: 1fr;
   place-items: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
 }
 </style>
