@@ -20,14 +20,14 @@ export const useMenuStore = defineStore({
             const obj = JSON.parse(r[1]);
             const table = obj.table;
             const rows = table.rows.map(({ c }) => c.map(({ v }) => v));
-
             let lastType = '';
-
             rows.forEach((row) => {
               let type = row[0];
               let product = row[1];
               let price = row[2];
               let description = row[3];
+
+              console.log(type);
 
               if (type !== lastType) {
                 this.menu[type] = [];
@@ -38,6 +38,8 @@ export const useMenuStore = defineStore({
               }
             });
           }
+
+          console.log(JSON.parse(r[1]));
         });
     },
   },

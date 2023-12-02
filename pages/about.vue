@@ -1,42 +1,22 @@
 <template>
   <section class="section">
-    <h1 class="section__title">
-      story
-    </h1>
+    <h1 class="section__title">Hey there!</h1>
     <p class="section__text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate nemo aperiam perspiciatis! Minus fugit qui,
-      vel totam voluptatibus blanditiis dicta repellat quos alias, error corrupti nihil incidunt dolor laborum deserunt.
+      We’re Damn Good, a cafe located in Brussels city center. Here, we do
+      everything ourselves, from the beans we roast for our coffees to the
+      delicious pastries and even the bread for the sandwiches. Damn Good was
+      founded by four friends: Louise, Eleonore, Pierre and Paul.
       <br />
       <br />
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt exercitationem eveniet vitae assumenda architecto id
-      incidunt, praesentium sed facere fuga doloribus debitis voluptate qui nobis velit suscipit quos eligendi ipsam!
+      After a long career in hospitality working as baristas, waiters and cooks,
+      we decided to open our own place in February 2023. In the heart of the
+      city, between Rogier and Yser we’ve created a place where everybody is
+      welcome, for a quick coffee in the morning, a meeting with your colleagues
+      or a lunchtime feast with one of our damn good sandwiches.
     </p>
   </section>
   <section class="section">
-    <h1 class="section__title">
-      products
-    </h1>
-    <p class="section__text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate nemo aperiam perspiciatis! Minus fugit qui,
-      vel totam voluptatibus blanditiis dicta repellat quos alias, error corrupti nihil incidunt dolor laborum deserunt.
-      <br />
-      <br />
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt exercitationem eveniet vitae assumenda architecto id
-      incidunt, praesentium sed facere fuga doloribus debitis voluptate qui nobis velit suscipit quos eligendi ipsam!
-    </p>
-  </section>
-  <section class="section">
-    <h1 class="section__title">
-      sandwiches
-    </h1>
-    <p class="section__text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate nemo aperiam perspiciatis! Minus fugit qui,
-      vel totam voluptatibus blanditiis dicta repellat quos alias, error corrupti nihil incidunt dolor laborum deserunt.
-      <br />
-      <br />
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt exercitationem eveniet vitae assumenda architecto id
-      incidunt, praesentium sed facere fuga doloribus debitis voluptate qui nobis velit suscipit quos eligendi ipsam!
-    </p>
+    <h1 class="section__title">Come say hi!</h1>
   </section>
 </template>
 
@@ -51,8 +31,6 @@
   letter-spacing: 10px;
   font-variant: small-caps;
   margin-block: 30px;
-
-
 }
 
 .section:nth-of-type(even) .section__title {

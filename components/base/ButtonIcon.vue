@@ -1,32 +1,35 @@
 <template>
   <button ref="button" @click="handleClick" class="button">
-    <img class="button__icon" :src="src" alt="button icon">
+    <img class="button__icon" :src="src" alt="button icon" />
   </button>
 </template>
 
 <script setup>
-
 const p = defineProps({
   src: String,
-  size: String
-})
+  size: String,
+});
 
-const button = $ref(null)
+const emit = defineEmits(["clicked"]);
+
+const button = $ref(null);
 
 onMounted(() => {
-  button.style.maxWidth = p.size + 'px';
-})
+  button.style.maxWidth = p.size + "px";
+});
 
 const state = $ref(false);
 
 const handleClick = () => {
   state = !state;
-}
+  emit("clicked", state);
+};
 
-defineExpose($$({
-  state
-}))
-
+defineExpose(
+  $$({
+    state,
+  })
+);
 </script>
 
 <style scoped>

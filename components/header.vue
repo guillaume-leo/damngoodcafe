@@ -1,8 +1,22 @@
 <template>
-  <nav :class="menuButton?.state ? 'navbar navbar--phone navbar--open' : 'navbar navbar--phone'">
-    <BaseButtonIcon ref="menuButton"
-      :class="menuButton?.state ? 'navbar__button navbar__button--close' : 'navbar__button'"
-      :src="menuButton?.state ? CloseIcon : HamburgerIcon" :size="menuButtonSize" />
+  <nav
+    :class="
+      menuButton?.state
+        ? 'navbar navbar--phone navbar--open'
+        : 'navbar navbar--phone'
+    "
+  >
+    <BaseButtonIcon
+      ref="menuButton"
+      :class="
+        menuButton?.state
+          ? 'navbar__button navbar__button--close'
+          : 'navbar__button'
+      "
+      :src="menuButton?.state ? CloseIcon : HamburgerIcon"
+      :size="menuButtonSize"
+      @clicked="onclick"
+    />
     <ul v-show="menuButton?.state" class="navbar__links links">
       <li class="links__link links__link--home">
         <BaseLinkIcon :src="DamnGoodLogo" size="100" url="/" alt="home page" />
@@ -14,9 +28,9 @@
       <li class="links__link">
         <BaseLink url="/menu" text="menu" />
       </li>
-      <li class="links__link">
+      <!-- <li class="links__link">
         <BaseLink url="/shop" text="shop" />
-      </li>
+      </li> -->
       <li class="links__link">
         <BaseLink url="/contact" text="contact" />
       </li>
@@ -25,20 +39,24 @@
 </template>
 
 <script setup>
-import HamburgerIcon from '/src/img/hamburger.png'
-import CloseIcon from '/src/img/close.png'
-import DamnGoodLogo from '/src/img/logo.png'
+import HamburgerIcon from "/src/img/hamburger.png";
+import CloseIcon from "/src/img/close.png";
+import DamnGoodLogo from "/src/img/logo.png";
 
-import { useRoutesStore } from '~~/store/routes';
+import { useRoutesStore } from "~~/store/routes";
+import { useNavbarStore } from "~~/store/navbar";
 
 const menuButton = $ref(null);
-const menuButtonSize = $ref('50')
+const menuButtonSize = $ref("50");
 
-const { path } = storeToRefs(useRoutesStore())
+const { path } = storeToRefs(useRoutesStore());
+const { open } = storeToRefs(useNavbarStore());
+
 watch(path, () => {
   menuButton.state = false;
-})
+});
 
+const onclick = (val) => (open.value = val);
 </script>
 
 <style scoped>
@@ -66,10 +84,9 @@ watch(path, () => {
 }
 
 .navbar--open {
-  min-height: inherit;
+  min-height: 100%;
   background-color: hsla(var(--hsl-primary) / 40%);
   backdrop-filter: blur(10px);
-
 }
 
 .navbar__button {
@@ -100,6 +117,5 @@ watch(path, () => {
   top: 7px;
   filter: invert(100%);
   filter: drop-shadow(0 0 0.75rem var(--color-white));
-
 }
 </style>
